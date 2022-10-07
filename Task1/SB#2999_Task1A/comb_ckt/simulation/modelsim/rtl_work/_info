@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim
+vcomb_ckt_tb
+Z1 !s110 1665170005
+!i10b 1
+!s100 =4adjY;?^f9k20jW3QZDH1
+IIgPEbZQNCM`4@RBo@OdnL1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1663695258
+8/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim/comb_ckt_tb.v
+F/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim/comb_ckt_tb.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1665170005.000000
+!s107 /home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim/comb_ckt_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim|/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim/comb_ckt_tb.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/simulation/modelsim
+Z6 tCvgOpt 0
+vcomb_ckt_verilog
+R1
+!i10b 1
+!s100 24LKFfi92:mNN_26?A6NT0
+I4f;<aAOenWe]oiSC;^GLC3
+R2
+R0
+w1665169419
+8/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/comb_ckt_verilog.v
+F/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/comb_ckt_verilog.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/comb_ckt_verilog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt|/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/comb_ckt_verilog.v|
+!i113 1
+R5
+Z7 !s92 -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt
+R6
+vMux_2_to_1
+R1
+!i10b 1
+!s100 780T5KB@F@W>EBaM[02Rh2
+I@<MHok[bNSJUWbBNkS[JZ3
+R2
+R0
+w1665043084
+8/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_2_to_1.v
+F/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_2_to_1.v
+Z8 L0 21
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_2_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt|/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_2_to_1.v|
+!i113 1
+R5
+R7
+R6
+n@mux_2_to_1
+vMux_4_to_1
+R1
+!i10b 1
+!s100 N6F_GbRBCAT[W0N3M3UzR3
+IaUHOSgAkF=Q@CX3GiMWDi0
+R2
+R0
+w1665169364
+8/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_4_to_1.v
+F/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_4_to_1.v
+R8
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_4_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt|/home/zain/Code_n_Projects/Eyantra/SB2999_Task1A/comb_ckt/Mux_4_to_1.v|
+!i113 1
+R5
+R7
+R6
+n@mux_4_to_1

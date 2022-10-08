@@ -9,31 +9,31 @@
 # Copying /home/zain/intelFPGA_lite/19.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B {/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm.v}
+# vlog -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm {/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/fsm.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:44:07 on Oct 08,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B" /home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm.v 
+# Start time: 18:55:15 on Oct 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm" /home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/fsm.v 
 # -- Compiling module fsm
 # 
 # Top level modules:
 # 	fsm
-# End time: 18:44:07 on Oct 08,2022, Elapsed time: 0:00:00
+# End time: 18:55:15 on Oct 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/simulation/modelsim {/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/simulation/modelsim/fsm_tb.v}
+# vlog -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/simulation/modelsim {/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/simulation/modelsim/fsm_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:44:07 on Oct 08,2022
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/simulation/modelsim" /home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/simulation/modelsim/fsm_tb.v 
+# Start time: 18:55:15 on Oct 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/simulation/modelsim" /home/zain/Code_n_Projects/Swatchhata-bot/Task1/SB#2999_Task1B/fsm/simulation/modelsim/fsm_tb.v 
 # -- Compiling module fsm_tb
 # 
 # Top level modules:
 # 	fsm_tb
-# End time: 18:44:07 on Oct 08,2022, Elapsed time: 0:00:00
+# End time: 18:55:15 on Oct 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  fsm_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" fsm_tb 
-# Start time: 18:44:07 on Oct 08,2022
+# Start time: 18:55:15 on Oct 08,2022
 # Loading work.fsm_tb
 # Loading work.fsm
 # 
@@ -53,5 +53,5 @@
 # No errors encountered, congratulations!
 # 
 # stdin: <EOF>
-# End time: 18:44:18 on Oct 08,2022, Elapsed time: 0:00:11
+# End time: 18:55:22 on Oct 08,2022, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 7

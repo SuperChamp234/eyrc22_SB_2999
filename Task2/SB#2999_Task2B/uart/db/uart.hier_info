@@ -1,0 +1,5 @@
+|uart
+clk_50M => ~NO_FANOUT~
+tx <= <GND>
+
+

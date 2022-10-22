@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at adc_control.v(49): always construct contains both blocking and non-blocking assignments File: C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v Line: 49
+Warning (10268): Verilog HDL information at adc_control.v(58): always construct contains both blocking and non-blocking assignments File: C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v Line: 58

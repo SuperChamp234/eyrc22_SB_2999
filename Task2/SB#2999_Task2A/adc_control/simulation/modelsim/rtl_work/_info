@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim
+vadc_control
+!s110 1666422091
+!i10b 1
+!s100 kk9R8^[lb[@dVCb;j>5G12
+I0Tk[mcefDUXn6k<@2EmD;0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1666421505
+8C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v
+FC:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v
+L0 22
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1666422091.000000
+!s107 C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control|C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/adc_control.v|
+!i113 1
+Z3 o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control}
+Z4 tCvgOpt 0
+vadc_tb
+!s110 1666422092
+!i10b 1
+!s100 a@@6Td5mEn=<63HoWoQFi2
+Ik;=LP;?5S8FbcJVh`;jhI3
+R1
+R0
+w1627994322
+8C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim/adc_tb.v
+FC:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim/adc_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1666422092.000000
+!s107 C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim/adc_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim|C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim/adc_tb.v|
+!i113 1
+R3
+!s92 -vlog01compat -work work {+incdir+C:/Personal Disc/SRA/E-yantra Swatchhta Bot/SB#2999_Task2A/adc_control/simulation/modelsim}
+R4

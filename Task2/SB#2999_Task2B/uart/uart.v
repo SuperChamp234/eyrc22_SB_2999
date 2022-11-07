@@ -29,13 +29,24 @@ reg [7*4:0] data = "SB99";
 reg [5:0] index = 5'b0;
 reg [5:0] index_hold = 5'b0;
 reg data_out = 1;
+reg [8:0]counter = 0;
+reg clk=0;
+integer n=8*4;
 
 assign tx = data_out;
 
 reg [4:0] current_state = STOP;
 
-
 always @ (posedge clk_50M) begin
+   counter = counter+1;
+   if(counter == 217) begin
+	   counter =1;
+		clk= ~clk;
+	end
+end
+
+
+always @ (posedge clk) begin
 	case(current_state)
 		IDLE: begin
 			current_state <= START;
@@ -54,7 +65,7 @@ always @ (posedge clk_50M) begin
 				current_state <= STOP;
 			end
 			else begin
-				data_out <= data[index_hold + index];
+				data_out <= data[n -(index_hold + index)];
 				index <= index + 5'd1;
 			end
 		end

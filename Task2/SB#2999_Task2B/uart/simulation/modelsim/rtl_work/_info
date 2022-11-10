@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim
+vtb
+Z1 !s110 1668088280
+!i10b 1
+!s100 L06bkPXJFeDB@ELTlH63M1
+Ib^7nFJaPP19Of@Bo9R[5;3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1628183972
+8/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim/tb.v
+F/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim/tb.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1668088280.000000
+!s107 /home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim|/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim/tb.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/simulation/modelsim
+Z6 tCvgOpt 0
+vuart
+R1
+!i10b 1
+!s100 ?T78zdToYYN:0MjXi@cRG3
+IZ<5MLEFhW?RBe]4Kf0@Q72
+R2
+R0
+w1668087350
+8/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/uart.v
+F/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/uart.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/uart.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart|/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart/uart.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+/home/zain/Code_n_Projects/Swatchhata-bot/Task2/SB#2999_Task2B/uart
+R6

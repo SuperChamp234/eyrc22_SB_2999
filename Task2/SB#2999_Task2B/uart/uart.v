@@ -24,18 +24,21 @@ module uart(
 ////////////////////////WRITE YOUR CODE FROM HERE////////////////////
 
 parameter IDLE = 0, START = 1, DATA = 2, STOP = 3;
+parameter data_len = 8*4;
 
-reg [7*4:0] data = "SB99";
-reg [5:0] index = 5'b0;
-reg [5:0] index_hold = 5'b0;
+
+reg [(data_len - 1):0] data = "SB99";
+reg [5:0] index = 6'b0;
+reg [5:0] index_hold = 6'd7;
 reg data_out = 1;
 reg [8:0]counter = 0;
-reg clk=0;
-integer n=8*4;
+reg clk=1;
+integer n=data_len-1;
+reg [5:0] index_jump = 6'd8;
 
 assign tx = data_out;
 
-reg [4:0] current_state = STOP;
+reg [4:0] next_state = IDLE;
 
 always @ (posedge clk_50M) begin
    counter = counter+1;
@@ -47,34 +50,34 @@ end
 
 
 always @ (posedge clk) begin
-	case(current_state)
+	case(next_state)
 		IDLE: begin
-			current_state <= START;
-			index <= 0;
-			if(index_hold == 5'd31)
-				index_hold <= 0;
+			next_state <= START;
+			index <= 5'd0;
+			if(index_hold == data_len + 7) begin
+				data_out <= 1;
+				next_state <= 5'b11111;
+			end
 		end
 		START: begin
-			current_state <= DATA;
+			next_state <= DATA;
 			data_out <= 0;
 		end
 		DATA: begin
-			if(index == 5'd7) begin
-				index_hold <= index_hold + index;
-				index <= 0;
-				current_state <= STOP;
-			end
-			else begin
-				data_out <= data[n -(index_hold + index)];
-				index <= index + 5'd1;
-			end
+				data_out <= data[n-(index_hold - index)];
+				index <= index + 6'd1;
+				if(index == 6'd7) begin
+					next_state <= STOP;
+					index_hold <= index_hold + index_jump;
+				end
 		end
 		STOP: begin
-			data_out = 1;
-			current_state <= IDLE;
+			data_out <= 1;
+			next_state <= IDLE;
 		end
 	endcase
 end
+
 
 ////////////////////////YOUR CODE ENDS HERE//////////////////////////
 endmodule

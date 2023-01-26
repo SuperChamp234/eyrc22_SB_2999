@@ -1,0 +1,11 @@
+module PWM_test(
+	input clk_50,
+	output PWM_OUT
+);
+
+reg [7:0] pwm1 = 50;
+reg [7:0] pwm2 = 50;
+
+
+PWM_Generator motor1(.clk(clk_50), .PWM_OUT(PWM_OUT), .DUTY_CYCLE(pwm1));
+PWM_Generator motor1(.clk(clk_50), .PWM_OUT(PWM_OUT), .DUTY_CYCLE(pwm2));

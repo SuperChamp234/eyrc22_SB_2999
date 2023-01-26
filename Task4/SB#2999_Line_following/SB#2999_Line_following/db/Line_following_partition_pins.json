@@ -1,0 +1,241 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "A1A",
+					"strict" : false
+				},
+				{
+					"name" : "A1B",
+					"strict" : false
+				},
+				{
+					"name" : "B1A",
+					"strict" : false
+				},
+				{
+					"name" : "B1B",
+					"strict" : false
+				},
+				{
+					"name" : "adc_cs_n",
+					"strict" : false
+				},
+				{
+					"name" : "din",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sck",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[10]",
+					"strict" : false
+				},
+				{
+					"name" : "lsa_3[11]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[0]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[1]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[2]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[3]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[4]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[5]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[6]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[7]",
+					"strict" : false
+				},
+				{
+					"name" : "delta[8]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "dout",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

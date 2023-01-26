@@ -1,0 +1,158 @@
+// SB : Task 2 A : ADC
+/*
+Instructions
+-------------------
+Students are not allowed to make any changes in the Module declaration.
+This file is used to design ADC Controller.
+
+Recommended Quartus Version : 19.1
+The submitted project file must be 19.1 compatible as the evaluation will be done on Quartus Prime Lite 19.1.
+
+Warning: The error due to compatibility will not be entertained.
+-------------------
+*/
+
+//ADC Controller design
+//Inputs  : clk_50 : 50 MHz clock, dout : digital output from ADC128S022 (serial 12-bit)
+//Output  : adc_cs_n : Chip Select, din : Ch. address input to ADC128S022, adc_sck : 2.5 MHz ADC clock,
+//				d_out_ch5, d_out_ch6, d_out_ch7 : 12-bit output of ch. 5,6 & 7,
+//				data_frame : To represent 16-cycle frame (optional)
+
+//////////////////DO NOT MAKE ANY CHANGES IN MODULE//////////////////
+module adc_control(
+	input  clk_50,				//50 MHz clock
+	input  dout,				//digital output from ADC128S022 (serial 12-bit)
+	output adc_cs_n,			//ADC128S022 Chip Select
+	output din,					//Ch. address input to ADC128S022 (serial)
+	output adc_sck,			//2.5 MHz ADC clock
+	output [11:0]d_out_ch5,	//12-bit output of ch. 5 (parallel)
+	output [11:0]d_out_ch6,	//12-bit output of ch. 6 (parallel)
+	output [11:0]d_out_ch7,	//12-bit output of ch. 7 (parallel)
+	output [1:0]data_frame	//To represent 16-cycle frame (optional)
+);
+	
+////////////////////////WRITE YOUR CODE FROM HERE////////////////////
+
+function [11:0] bound;
+	input [11:0] data;
+	begin
+		bound = data/12'd2;
+	end
+endfunction
+
+reg [7:0] counter = 1 ;
+reg [6:0] count = 1 ;
+reg [2:0] ADD5 = 101 ;
+reg [2:0] ADD6 = 110 ;
+reg [2:0] ADD7 = 111 ;
+reg [11:0] data ;
+reg sck ;
+reg cs = 0 ;
+reg d = 0 ;
+reg [11:0] ch5 = 12'b0 ;
+reg [11:0] ch6 = 12'b0 ;
+reg [11:0] ch7 = 12'b0 ;
+
+always @(negedge clk_50 ) begin
+      counter <= counter + 1;
+		
+    if(counter==20) begin 
+       counter <= 1; end 
+		 
+    sck = (counter>10) ? 1:0;
+end
+	
+always @(negedge sck) begin 
+      count <= count + 1 ;
+		
+	 if (count == 49 ) begin 
+	    count <= 1 ; end 
+      
+	 if (count == 16 || count == 32 || count == 48 ) begin 
+        cs <= 1; end 
+    
+	 else begin 
+        cs <= 0; end 
+ 
+    case (count)
+	  
+	 3:  d <= ADD5[2] ;
+	 4:  d <= ADD5[1] ;
+	 5:  d <= ADD5[0] ;
+	 6:  begin 
+	     data[11] <= dout ;
+	     d <= 0 ;
+		  end
+	 7:  data[10] <= dout ;
+	 8:  data[9] <= dout ;
+	 9:  data[8] <= dout ;
+	 10: data[7] <= dout ;
+	 11: data[6] <= dout ;
+	 12: data[5] <= dout ;
+	 13: data[4] <= dout ;
+	 14: data[3] <= dout ;
+	 15: data[2] <= dout ;
+	 16: data[1] <= dout ;
+	 17: begin 
+	     data[0] = dout ;
+	     ch5 <= bound(data) ;
+		  end
+	 
+	 19: d <= ADD6[2] ;
+	 20: d <= ADD6[1] ;
+	 21: d <= ADD6[0] ;
+	 22: begin 
+	     data[11] <= dout ;
+	     d <= 0 ;
+		  end
+	 23: data[10] <= dout ;
+	 24: data[9] <= dout ;
+	 25: data[8] <= dout ;
+	 26: data[7] <= dout ;
+	 27: data[6] <= dout ;
+	 28: data[5] <= dout ;
+	 29: data[4] <= dout ;
+	 30: data[3] <= dout ;
+	 31: data[2] <= dout ;
+	 32: data[1] <= dout ;
+	 33: begin 
+	     data[0] = dout ;
+	     ch6 <= bound(data) ;
+		  end 
+	 	  
+	 35: d <= ADD7[2] ;
+	 36: d <= ADD7[1] ;
+	 37: d <= ADD7[0] ;
+	 38: begin 
+	     data[11] <= dout ;
+	     d <= 0 ;
+		  end 
+	 39: data[10] <= dout ; 
+	 40: data[9] <= dout ;
+	 41: data[8] <= dout ;
+	 42: data[7] <= dout ;
+	 43: data[6] <= dout ;
+	 44: data[5] <= dout ;
+	 45: data[4] <= dout ;
+	 46: data[3] <= dout ;
+	 47: data[2] <= dout ;
+	 48: data[1] <= dout ;
+	 49:  begin 
+	     data[0] = dout ;
+	     ch7 <= bound(data);
+		  end
+		  
+	 endcase 
+	 
+end 
+		
+assign adc_sck = sck ;
+assign adc_cs_n = cs ; 
+assign din = d ;
+assign d_out_ch5 = ch5 ;
+assign d_out_ch6 = ch6 ;
+assign d_out_ch7 = ch7 ;	 
+	 
+////////////////////////YOUR CODE ENDS HERE//////////////////////////
+endmodule
+///////////////////////////////MODULE ENDS///////////////////////////

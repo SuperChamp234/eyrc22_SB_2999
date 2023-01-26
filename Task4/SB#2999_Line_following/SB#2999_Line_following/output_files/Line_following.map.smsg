@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at adc_control.v(46): always construct contains both blocking and non-blocking assignments File: C:/Users/ROG STRIX/OneDrive/Desktop/Swatchhata_Bot/SB2999_Line_following/SB#2999_Line_following/rtl/adc_control.v Line: 46
+Warning (10268): Verilog HDL information at adc_control.v(61): always construct contains both blocking and non-blocking assignments File: C:/Users/ROG STRIX/OneDrive/Desktop/Swatchhata_Bot/SB2999_Line_following/SB#2999_Line_following/rtl/adc_control.v Line: 61
+Warning (10268): Verilog HDL information at motor.v(17): always construct contains both blocking and non-blocking assignments File: C:/Users/ROG STRIX/OneDrive/Desktop/Swatchhata_Bot/SB2999_Line_following/SB#2999_Line_following/rtl/motor.v Line: 17

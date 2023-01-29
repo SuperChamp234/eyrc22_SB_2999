@@ -33,9 +33,10 @@ module path_planner
 #(parameter node_count = 27, parameter max_edges = 4)
 (
 	input clk,
-	input start,
-	input [4:0] s_node,
-	input [4:0] e_node,
+	input start_pin,
+	//input start,
+	//input [4:0] s_node,
+	//input [4:0] e_node,
 	output reg done,	
 	output reg [10*5-1:0] final_path,
 	output reg [10*2-1:0] direction,
@@ -54,19 +55,26 @@ reg [10*5-1:0] final_path_reg = 0; //{10{{5'd27},{3'd1}}};
 parameter IDLE = 0, S0 = 1, S1 = 2, S2 = 3;
 reg [10*2-1:0] direction_reg = 0;
 
-
+wire start = ~start_pin;
+reg [4:0] s_node = 0;
+reg [4:0] e_node = 5'd9;
 //north = 0, east = 1, south = 2, west = 3;
 
 //feed the maze into the ROM
-initial begin
 
-	for(i = 0; i<node_count-1;i=i+1) begin
-		//dist[i] = 0;
-		//dist_h[i] = 0;
-		dist[i] = {1'b0,s_node[4:0],{infinity}};
-		dist_h[i] = {1'b0,s_node[4:0],{infinity}};
-	end
-	
+reg [3:0] next_state = IDLE; //state variable
+reg [4:0] shortest_path_iter;
+reg [4:0] hold_update_mat_outing;
+reg [12:0] min = 0;
+reg [4:0] min_index = 0;
+reg [12:0] sel = {1'b1,{1'b0,1'b0,1'b0,1'b0,1'b0},{infinity}}; //selected node, {visited, node we came from, cost}
+reg [4:0] visited_count = 0;
+reg [1:0] readflag = 1;
+reg [3:0] count=0;
+reg [49:0] holder;
+
+
+always @(posedge clk) begin
 
 	cost_matrix [0][1][0] = 3'd3 ; cost_matrix [0][1][1] = 3'd1;
 	cost_matrix [1][0][0] = 3'd3 ; cost_matrix [1][0][1] = 3'd1;
@@ -123,26 +131,84 @@ initial begin
 	cost_matrix [24][23][0] = 3'd2; cost_matrix [24][23][1] = 3'd3;
 	cost_matrix [25][22][0] = 3'd3; cost_matrix [25][22][1] = 3'd3; 
 	
-	for(i = 0;i<node_count-1;i=i+1) begin
-		cost_matrix[i][i][0] = 0; //fill all node_x -> node_x distances as 
-		cost_matrix[i][i][1] = 0;
-		cost_matrix[27][i][1] = 0;
-	end
-	
-end 
-
-reg [3:0] next_state = IDLE; //state variable
-reg [4:0] shortest_path_iter;
-reg [4:0] hold_update_mat_outing;
-reg [12:0] min = 0;
-reg [4:0] min_index = 0;
-reg [12:0] sel = {1'b1,{1'b0,1'b0,1'b0,1'b0,1'b0},{infinity}}; //selected node, {visited, node we came from, cost}
-reg [4:0] visited_count = 0;
-reg [1:0] readflag = 1;
-reg [3:0] count=0;
-
-
-always @(posedge clk) begin
+	cost_matrix[0][0][0] = 0;
+cost_matrix[0][0][1] = 0;
+cost_matrix[27][0][1] = 0;
+cost_matrix[1][1][0] = 0;
+cost_matrix[1][1][1] = 0;
+cost_matrix[27][1][1] = 0;
+cost_matrix[2][2][0] = 0;
+cost_matrix[2][2][1] = 0;
+cost_matrix[27][2][1] = 0;
+cost_matrix[3][3][0] = 0;
+cost_matrix[3][3][1] = 0;
+cost_matrix[27][3][1] = 0;
+cost_matrix[4][4][0] = 0;
+cost_matrix[4][4][1] = 0;
+cost_matrix[27][4][1] = 0;
+cost_matrix[5][5][0] = 0;
+cost_matrix[5][5][1] = 0;
+cost_matrix[27][5][1] = 0;
+cost_matrix[6][6][0] = 0;
+cost_matrix[6][6][1] = 0;
+cost_matrix[27][6][1] = 0;
+cost_matrix[7][7][0] = 0;
+cost_matrix[7][7][1] = 0;
+cost_matrix[27][7][1] = 0;
+cost_matrix[8][8][0] = 0;
+cost_matrix[8][8][1] = 0;
+cost_matrix[27][8][1] = 0;
+cost_matrix[9][9][0] = 0;
+cost_matrix[9][9][1] = 0;
+cost_matrix[27][9][1] = 0;
+cost_matrix[10][10][0] = 0;
+cost_matrix[10][10][1] = 0;
+cost_matrix[27][10][1] = 0;
+cost_matrix[11][11][0] = 0;
+cost_matrix[11][11][1] = 0;
+cost_matrix[27][11][1] = 0;
+cost_matrix[12][12][0] = 0;
+cost_matrix[12][12][1] = 0;
+cost_matrix[27][12][1] = 0;
+cost_matrix[13][13][0] = 0;
+cost_matrix[13][13][1] = 0;
+cost_matrix[27][13][1] = 0;
+cost_matrix[14][14][0] = 0;
+cost_matrix[14][14][1] = 0;
+cost_matrix[27][14][1] = 0;
+cost_matrix[15][15][0] = 0;
+cost_matrix[15][15][1] = 0;
+cost_matrix[27][15][1] = 0;
+cost_matrix[16][16][0] = 0;
+cost_matrix[16][16][1] = 0;
+cost_matrix[27][16][1] = 0;
+cost_matrix[17][17][0] = 0;
+cost_matrix[17][17][1] = 0;
+cost_matrix[27][17][1] = 0;
+cost_matrix[18][18][0] = 0;
+cost_matrix[18][18][1] = 0;
+cost_matrix[27][18][1] = 0;
+cost_matrix[19][19][0] = 0;
+cost_matrix[19][19][1] = 0;
+cost_matrix[27][19][1] = 0;
+cost_matrix[20][20][0] = 0;
+cost_matrix[20][20][1] = 0;
+cost_matrix[27][20][1] = 0;
+cost_matrix[21][21][0] = 0;
+cost_matrix[21][21][1] = 0;
+cost_matrix[27][21][1] = 0;
+cost_matrix[22][22][0] = 0;
+cost_matrix[22][22][1] = 0;
+cost_matrix[27][22][1] = 0;
+cost_matrix[23][23][0] = 0;
+cost_matrix[23][23][1] = 0;
+cost_matrix[27][23][1] = 0;
+cost_matrix[24][24][0] = 0;
+cost_matrix[24][24][1] = 0;
+cost_matrix[27][24][1] = 0;
+cost_matrix[25][25][0] = 0;
+cost_matrix[25][25][1] = 0;
+cost_matrix[27][25][1] = 0;
 
 	case(next_state)
 		IDLE: begin
@@ -211,9 +277,11 @@ always @(posedge clk) begin
 				//$display("DONE");
 			end
 			else begin
-				//final_path_reg = (final_path_reg << 5) + dist_h[j][11:7];
-				final_path_reg[(5*count+4)-:5] = dist_h[j][11:7];
-				direction_reg[(2*count+1)-:2] = cost_matrix[dist_h[j][11:7]][j][1];
+				holder = dist_h[j][11:7];
+				final_path_reg = final_path_reg + (holder << count*5) - (50'b11011 << count*5);
+				//9:5...14:10..19:15..
+				//final_path_reg[(5*count+4):(5*count)] = dist_h[j][11:7];
+				//direction_reg[(2*count):(2*count)] = cost_matrix[dist_h[j][11:7]][j][1];
 				count = count+1;
 				j = dist_h[j][11:7];
 				//$display("j: %0d",j);

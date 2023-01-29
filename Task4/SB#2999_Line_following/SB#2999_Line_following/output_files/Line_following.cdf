@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/ROG STRIX/OneDrive/Desktop/Swatchhata_Bot/SB2999_Line_following/SB#2999_Line_following/output_files/") File("Line_following.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("F:/eyrc22_SB_2999/Task4/SB#2999_Line_following/SB#2999_Line_following/output_files/") File("Line_following.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

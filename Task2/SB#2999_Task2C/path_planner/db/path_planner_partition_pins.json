@@ -216,6 +216,78 @@
 					"strict" : false
 				},
 				{
+					"name" : "direction[2]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[3]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[4]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[5]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[6]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[7]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[8]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[9]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[10]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[11]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[14]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[15]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[16]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[17]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[18]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[19]",
+					"strict" : false
+				},
+				{
 					"name" : "direction_index[1]",
 					"strict" : false
 				},
@@ -236,11 +308,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "start_pin",
+					"name" : "start",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "e_node[0]",
+					"strict" : false
+				},
+				{
+					"name" : "e_node[1]",
+					"strict" : false
+				},
+				{
+					"name" : "e_node[2]",
+					"strict" : false
+				},
+				{
+					"name" : "e_node[3]",
+					"strict" : false
+				},
+				{
+					"name" : "e_node[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s_node[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s_node[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s_node[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_node[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s_node[2]",
 					"strict" : false
 				},
 				{

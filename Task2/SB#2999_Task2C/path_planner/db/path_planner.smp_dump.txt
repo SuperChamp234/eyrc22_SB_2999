@@ -1,6 +1,8 @@
 
 State Machine - |path_planner|next_state
-Name next_state.IDLE next_state.S1 next_state.S0 
-next_state.IDLE 0 0 0 
-next_state.S0 1 0 1 
-next_state.S1 1 1 0 
+Name next_state.S2 next_state.S1 next_state.S0 next_state.IDLE next_state.S3 
+next_state.IDLE 0 0 0 0 0 
+next_state.S0 0 0 1 1 0 
+next_state.S1 0 1 0 1 0 
+next_state.S2 1 0 0 1 0 
+next_state.S3 0 0 0 1 1 

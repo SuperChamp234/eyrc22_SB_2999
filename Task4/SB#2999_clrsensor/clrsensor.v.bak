@@ -1,0 +1,60 @@
+module clrsensor (
+    input clk,
+    input sensorout,
+    output reg s0,
+    output reg s1,
+    output reg s2,
+    output reg s3,
+    output reg [14:0]R,
+    output reg [14:0]G,
+    output reg [14:0]B,
+    output reg [1:0]state
+);
+
+reg [14:0]freq;
+
+initial begin
+    s0 <= 1;
+    s1 <= 1;
+    freq <= 0;
+    state <= 0; 
+end
+always @(posedge clk) begin
+    case (state )
+        0: begin
+            //red 
+            s2 <= 0;
+            s3 <= 0;
+            if (sensorout <= 1) freq <= freq + 1;
+            else begin
+                R <= freq;
+                freq <= 1;
+                state <= 1;
+            end
+        end
+        1: begin
+            //blue 
+            s2 <= 1;
+            s3 <= 0;
+            if (sensorout <= 1) freq <= freq + 1;
+            else begin
+                B <= freq;
+                freq <= 1;
+                state <= 2;
+            end
+        end
+        2:begin
+            //green 
+            s2 <= 1;
+            s3 <= 1;
+            if (sensorout <= 1) freq <= freq + 1;
+            else begin
+                G <= freq;
+                freq <= 1;
+                state <= 0;
+            end
+        end 
+        
+    endcase
+end
+endmodule

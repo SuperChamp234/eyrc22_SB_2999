@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Feb 04 09:21:55 2023
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : clrsensor
+Top-level Entity Name : clrsensor
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 3,060 / 22,320 ( 14 % )
+    Total combinational functions : 1,355 / 22,320 ( 6 % )
+    Dedicated logic registers : 2,642 / 22,320 ( 12 % )
+Total registers : 2642
+Total pins : 77 / 154 ( 50 % )
+Total virtual pins : 0
+Total memory bits : 22,656 / 608,256 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

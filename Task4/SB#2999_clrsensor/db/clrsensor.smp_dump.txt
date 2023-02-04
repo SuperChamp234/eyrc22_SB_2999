@@ -1,0 +1,8 @@
+
+State Machine - |clrsensor|Xbee:comb_3|next_state
+Name next_state.STOP next_state.DATA next_state.START next_state.IDLE next_state.11111 
+next_state.IDLE 0 0 0 0 0 
+next_state.START 0 0 1 1 0 
+next_state.DATA 0 1 0 1 0 
+next_state.STOP 1 0 0 1 0 
+next_state.11111 0 0 0 1 1 

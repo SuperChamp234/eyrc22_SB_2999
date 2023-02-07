@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Jan 29 17:34:22 2023
+Fitter Status : Successful - Tue Feb 07 16:21:19 2023
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : Line_following
 Top-level Entity Name : line_following
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 3,831 / 22,320 ( 17 % )
-    Total combinational functions : 1,473 / 22,320 ( 7 % )
-    Dedicated logic registers : 3,190 / 22,320 ( 14 % )
-Total registers : 3190
+Total logic elements : 4,257 / 22,320 ( 19 % )
+    Total combinational functions : 1,615 / 22,320 ( 7 % )
+    Dedicated logic registers : 3,596 / 22,320 ( 16 % )
+Total registers : 3596
 Total pins : 81 / 154 ( 53 % )
 Total virtual pins : 0
-Total memory bits : 282,624 / 608,256 ( 46 % )
+Total memory bits : 325,632 / 608,256 ( 54 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

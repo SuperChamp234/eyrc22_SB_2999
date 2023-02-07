@@ -178,29 +178,45 @@ clk_50 => counter[28].CLK
 clk_50 => counter[29].CLK
 clk_50 => counter[30].CLK
 clk_50 => counter[31].CLK
-duty_cycle1[0] => PWM_Generator:motor1.DUTY_CYCLE[0]
-duty_cycle1[1] => PWM_Generator:motor1.DUTY_CYCLE[1]
-duty_cycle1[2] => PWM_Generator:motor1.DUTY_CYCLE[2]
-duty_cycle1[3] => PWM_Generator:motor1.DUTY_CYCLE[3]
-duty_cycle1[4] => PWM_Generator:motor1.DUTY_CYCLE[4]
-duty_cycle1[5] => PWM_Generator:motor1.DUTY_CYCLE[5]
-duty_cycle1[6] => PWM_Generator:motor1.DUTY_CYCLE[6]
-duty_cycle1[7] => PWM_Generator:motor1.DUTY_CYCLE[7]
-duty_cycle2[0] => PWM_Generator:motor2.DUTY_CYCLE[0]
-duty_cycle2[1] => PWM_Generator:motor2.DUTY_CYCLE[1]
-duty_cycle2[2] => PWM_Generator:motor2.DUTY_CYCLE[2]
-duty_cycle2[3] => PWM_Generator:motor2.DUTY_CYCLE[3]
-duty_cycle2[4] => PWM_Generator:motor2.DUTY_CYCLE[4]
-duty_cycle2[5] => PWM_Generator:motor2.DUTY_CYCLE[5]
-duty_cycle2[6] => PWM_Generator:motor2.DUTY_CYCLE[6]
-duty_cycle2[7] => PWM_Generator:motor2.DUTY_CYCLE[7]
-A1A <= PWM_Generator:motor1.PWM_OUT
-A1B <= PWM_Generator:motor1.PWM_OUT
-B1A <= PWM_Generator:motor2.PWM_OUT
-B1B <= PWM_Generator:motor2.PWM_OUT
+duty_cycle1_fwd[0] => PWM_Generator:motor1_fwd.DUTY_CYCLE[0]
+duty_cycle1_fwd[1] => PWM_Generator:motor1_fwd.DUTY_CYCLE[1]
+duty_cycle1_fwd[2] => PWM_Generator:motor1_fwd.DUTY_CYCLE[2]
+duty_cycle1_fwd[3] => PWM_Generator:motor1_fwd.DUTY_CYCLE[3]
+duty_cycle1_fwd[4] => PWM_Generator:motor1_fwd.DUTY_CYCLE[4]
+duty_cycle1_fwd[5] => PWM_Generator:motor1_fwd.DUTY_CYCLE[5]
+duty_cycle1_fwd[6] => PWM_Generator:motor1_fwd.DUTY_CYCLE[6]
+duty_cycle1_fwd[7] => PWM_Generator:motor1_fwd.DUTY_CYCLE[7]
+duty_cycle1_back[0] => PWM_Generator:motor1_back.DUTY_CYCLE[0]
+duty_cycle1_back[1] => PWM_Generator:motor1_back.DUTY_CYCLE[1]
+duty_cycle1_back[2] => PWM_Generator:motor1_back.DUTY_CYCLE[2]
+duty_cycle1_back[3] => PWM_Generator:motor1_back.DUTY_CYCLE[3]
+duty_cycle1_back[4] => PWM_Generator:motor1_back.DUTY_CYCLE[4]
+duty_cycle1_back[5] => PWM_Generator:motor1_back.DUTY_CYCLE[5]
+duty_cycle1_back[6] => PWM_Generator:motor1_back.DUTY_CYCLE[6]
+duty_cycle1_back[7] => PWM_Generator:motor1_back.DUTY_CYCLE[7]
+duty_cycle2_fwd[0] => PWM_Generator:motor2_fwd.DUTY_CYCLE[0]
+duty_cycle2_fwd[1] => PWM_Generator:motor2_fwd.DUTY_CYCLE[1]
+duty_cycle2_fwd[2] => PWM_Generator:motor2_fwd.DUTY_CYCLE[2]
+duty_cycle2_fwd[3] => PWM_Generator:motor2_fwd.DUTY_CYCLE[3]
+duty_cycle2_fwd[4] => PWM_Generator:motor2_fwd.DUTY_CYCLE[4]
+duty_cycle2_fwd[5] => PWM_Generator:motor2_fwd.DUTY_CYCLE[5]
+duty_cycle2_fwd[6] => PWM_Generator:motor2_fwd.DUTY_CYCLE[6]
+duty_cycle2_fwd[7] => PWM_Generator:motor2_fwd.DUTY_CYCLE[7]
+duty_cycle2_back[0] => PWM_Generator:motor2_back.DUTY_CYCLE[0]
+duty_cycle2_back[1] => PWM_Generator:motor2_back.DUTY_CYCLE[1]
+duty_cycle2_back[2] => PWM_Generator:motor2_back.DUTY_CYCLE[2]
+duty_cycle2_back[3] => PWM_Generator:motor2_back.DUTY_CYCLE[3]
+duty_cycle2_back[4] => PWM_Generator:motor2_back.DUTY_CYCLE[4]
+duty_cycle2_back[5] => PWM_Generator:motor2_back.DUTY_CYCLE[5]
+duty_cycle2_back[6] => PWM_Generator:motor2_back.DUTY_CYCLE[6]
+duty_cycle2_back[7] => PWM_Generator:motor2_back.DUTY_CYCLE[7]
+A1A <= PWM_Generator:motor1_back.PWM_OUT
+A1B <= PWM_Generator:motor1_fwd.PWM_OUT
+B1A <= PWM_Generator:motor2_back.PWM_OUT
+B1B <= PWM_Generator:motor2_fwd.PWM_OUT
 
 
-|line_following|motor:motor_control|PWM_Generator:motor1
+|line_following|motor:motor_control|PWM_Generator:motor1_fwd
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -221,7 +237,49 @@ DUTY_CYCLE[8] => LessThan1.IN2
 PWM_OUT <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|line_following|motor:motor_control|PWM_Generator:motor2
+|line_following|motor:motor_control|PWM_Generator:motor1_back
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+DUTY_CYCLE[0] => LessThan1.IN10
+DUTY_CYCLE[1] => LessThan1.IN9
+DUTY_CYCLE[2] => LessThan1.IN8
+DUTY_CYCLE[3] => LessThan1.IN7
+DUTY_CYCLE[4] => LessThan1.IN6
+DUTY_CYCLE[5] => LessThan1.IN5
+DUTY_CYCLE[6] => LessThan1.IN4
+DUTY_CYCLE[7] => LessThan1.IN3
+DUTY_CYCLE[8] => LessThan1.IN2
+PWM_OUT <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|line_following|motor:motor_control|PWM_Generator:motor2_fwd
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+DUTY_CYCLE[0] => LessThan1.IN10
+DUTY_CYCLE[1] => LessThan1.IN9
+DUTY_CYCLE[2] => LessThan1.IN8
+DUTY_CYCLE[3] => LessThan1.IN7
+DUTY_CYCLE[4] => LessThan1.IN6
+DUTY_CYCLE[5] => LessThan1.IN5
+DUTY_CYCLE[6] => LessThan1.IN4
+DUTY_CYCLE[7] => LessThan1.IN3
+DUTY_CYCLE[8] => LessThan1.IN2
+PWM_OUT <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|line_following|motor:motor_control|PWM_Generator:motor2_back
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK

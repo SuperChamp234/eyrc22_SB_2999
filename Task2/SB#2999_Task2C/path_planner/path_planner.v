@@ -31,10 +31,10 @@ module path_planner
 #(parameter node_count = 27, parameter max_edges = 4)
 (
 	input clk,
-	//input start_pin,
-	input start,
-	input [4:0] s_node,
-	input [4:0] e_node,
+	input start_pin,
+	//input start,
+	//input [4:0] s_node,
+	//input [4:0] e_node,
 	output reg done,	
 	output reg [10*5-1:0] final_path,
 	output reg [10*2-1:0] direction,
@@ -53,9 +53,9 @@ reg [10*5-1:0] final_path_reg = 0; //{10{{5'd27},{3'd1}}};
 parameter IDLE = 0, S0 = 1, S1 = 2, S2 = 3, S3 = 4;
 reg [10*2-1:0] direction_reg = 0;
 
-//wire start = ~start_pin;
-//reg [4:0] s_node = 0;
-//reg [4:0] e_node = 5'd9;
+wire start = ~start_pin;
+reg [4:0] s_node = 0;
+reg [4:0] e_node = 5'd9;
 //north = 0, east = 1, south = 2, west = 3;
 
 //feed the maze into the ROM

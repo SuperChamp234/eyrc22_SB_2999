@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Jan 31 19:56:52 2023
+Analysis & Synthesis Status : Successful - Wed Feb 01 16:02:27 2023
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : path_planner
 Top-level Entity Name : path_planner
 Family : Cyclone IV E
-Total logic elements : 3,601
-    Total combinational functions : 2,402
-    Dedicated logic registers : 2,118
-Total registers : 2118
-Total pins : 89
+Total logic elements : 3,435
+    Total combinational functions : 2,228
+    Dedicated logic registers : 2,120
+Total registers : 2120
+Total pins : 79
 Total virtual pins : 0
-Total memory bits : 77,824
+Total memory bits : 78,848
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

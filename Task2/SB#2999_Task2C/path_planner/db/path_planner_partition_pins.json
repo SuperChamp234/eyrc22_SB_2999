@@ -308,51 +308,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "start",
+					"name" : "start_pin",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "e_node[0]",
-					"strict" : false
-				},
-				{
-					"name" : "e_node[1]",
-					"strict" : false
-				},
-				{
-					"name" : "e_node[2]",
-					"strict" : false
-				},
-				{
-					"name" : "e_node[3]",
-					"strict" : false
-				},
-				{
-					"name" : "e_node[4]",
-					"strict" : false
-				},
-				{
-					"name" : "s_node[0]",
-					"strict" : false
-				},
-				{
-					"name" : "s_node[1]",
-					"strict" : false
-				},
-				{
-					"name" : "s_node[3]",
-					"strict" : false
-				},
-				{
-					"name" : "s_node[4]",
-					"strict" : false
-				},
-				{
-					"name" : "s_node[2]",
 					"strict" : false
 				},
 				{
